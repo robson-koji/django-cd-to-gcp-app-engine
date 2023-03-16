@@ -22,11 +22,10 @@ steps:
 #          echo '\n\n'
 
 substitutions:
-    _TESTENV: ${_COMMIT_MESSAGE} | cut -d ':' -f2
+    _TESTENV: '${_COMMIT_MESSAGE} | cut -d ":" -f2'
 
 
 logsBucket: 'gs://buildlogsbucket'
 options:
   logging: GCS_ONLY
   dynamic_substitutions: true
-_
