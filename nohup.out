@@ -16,3 +16,6 @@
 2023/03/16 19:52:36 ephemeral certificate for instance wildepod-339517:us-west2:wildepoddb will expire soon, refreshing now.
 2023/03/16 19:52:36 refreshing ephemeral certificate for instance wildepod-339517:us-west2:wildepoddb
 2023/03/16 19:52:38 Scheduling refresh of ephemeral certificate in 54m59s
+2023/03/16 20:47:37 ephemeral certificate for instance wildepod-339517:us-west2:wildepoddb will expire soon, refreshing now.
+2023/03/16 20:47:37 refreshing ephemeral certificate for instance wildepod-339517:us-west2:wildepoddb
+2023/03/16 20:47:43 Scheduling refresh of ephemeral certificate in 54m58s

@@ -1,17 +1,32 @@
 steps:
+
   - name: 'gcr.io/cloud-builders/gcloud'
     entrypoint: "bash"
     args:
       - "-c"
       - |
-          echo '\n\n'
-          echo '_COMMIT_MESSAGE: ' ${_COMMIT_MESSAGE} 
-          echo ${_COMMIT_MESSAGE} | cut -d ':' -f2
-          echo '\n\n'
+          echo '_TESTENV: ' ${_TESTENV}
+
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['app', 'deploy', '$_TESTENV']
 
 
+#  - name: 'gcr.io/cloud-builders/gcloud'
+#    entrypoint: "bash"
+#    args:
+#      - "-c"
+#      - |
+#          echo '\n\n'
+#          echo '_COMMIT_MESSAGE: ' ${_COMMIT_MESSAGE} 
+#          echo ${_COMMIT_MESSAGE} | cut -d ':' -f2
+#          echo '\n\n'
+
+substitutions:
+    _TESTENV: ${_COMMIT_MESSAGE} | cut -d ':' -f2
 
 
 logsBucket: 'gs://buildlogsbucket'
 options:
   logging: GCS_ONLY
+  dynamic_substitutions: true
+_
