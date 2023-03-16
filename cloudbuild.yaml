@@ -4,11 +4,17 @@ steps:
     args:
       - "-c"
       - |
-          echo "\n\n"
+          echo '\n\n'
           echo 'bash - substitution variables'
           echo '_COMMIT_MESSAGE: ' $_COMMIT_MESSAGE
-          echo  ${$_COMMIT_MESSAGE:-8:${#$_COMMIT_MESSAGE}}
-          echo "\n\n"
+#          echo  ${$_COMMIT_MESSAGE:-8:${#$_COMMIT_MESSAGE}}
+#          echo "\n\n"
+
+          START=$((${#_COMMIT_MESSAGE}-8))
+          TESTENV=${_COMMIT_MESSAGE:${START}:${#_COMMIT_MESSAGE}}
+	  echo 'TESTENV: ' TESTENV
+          echo '\n\n'
+
 
 
 
