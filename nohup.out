@@ -7,3 +7,6 @@
 2023/03/16 17:07:33 Scheduling refresh of ephemeral certificate in 54m58s
 2023/03/16 17:07:36 New connection for "wildepod-339517:us-west2:wildepoddb"
 2023/03/16 17:07:40 New connection for "wildepod-339517:us-west2:wildepoddb"
+2023/03/16 18:02:32 ephemeral certificate for instance wildepod-339517:us-west2:wildepoddb will expire soon, refreshing now.
+2023/03/16 18:02:32 refreshing ephemeral certificate for instance wildepod-339517:us-west2:wildepoddb
+2023/03/16 18:02:34 Scheduling refresh of ephemeral certificate in 54m59s
