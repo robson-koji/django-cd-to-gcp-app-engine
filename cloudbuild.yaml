@@ -6,7 +6,7 @@ steps:
       - |
           echo '\n\n'
           echo '_COMMIT_MESSAGE: ' ${_COMMIT_MESSAGE} 
-          echo '_COMMIT_MESSAGE: ' ${_COMMIT_MESSAGE} | cut -d ':' -f2
+          echo ${_COMMIT_MESSAGE} | cut -d ':' -f2
           echo '\n\n'
 
 
