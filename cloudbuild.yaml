@@ -13,8 +13,8 @@ steps:
 
 
 
-#logsBucket: 'gs://buildlogsbucket'
+logsBucket: 'gs://buildlogsbucket'
 
 options:
-  logging: CLOUD_LOGGING_ONLY
-  #logging: GCS_ONLY
+#  logging: CLOUD_LOGGING_ONLY
+  logging: GCS_ONLY
