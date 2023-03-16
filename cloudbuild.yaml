@@ -5,13 +5,7 @@ steps:
       - "-c"
       - |
           echo '\n\n'
-          echo 'bash - substitution variables'
-          echo '0 _COMMIT_MESSAGE: ' $_COMMIT_MESSAGE
-          echo '1 _COMMIT_MESSAGE: ' ${_COMMIT_MESSAGE}
-          echo '2 _COMMIT_MESSAGE: ' $((${#_COMMIT_MESSAGE}))
-          echo '3 _COMMIT_MESSAGE: ' #_COMMIT_MESSAGE
-          echo '4 -COMMIT_MESSAGE: ' $((${#_COMMIT_MESSAGE}-8))
-          echo ${${_COMMIT_MESSAGE}:$(($((${#_COMMIT_MESSAGE}))-8)):$((${#_COMMIT_MESSAGE}))}
+          echo '_COMMIT_MESSAGE: ' ${_COMMIT_MESSAGE// /} | cut -d '|' -f2
           echo '\n\n'
 
 
