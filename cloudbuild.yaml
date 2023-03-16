@@ -10,8 +10,6 @@ steps:
           echo 'bash - substitution variables'
           env
           echo '_COMMIT_MESSAGE: ' $_COMMIT_MESSAGE
-          echo '_COMMIT_MESSAGE: ' ${_COMMIT_MESSAGE}
-          echo 'DEPLOY ENV: ' ${${_COMMIT_MESSAGE}:-8:${#${_COMMIT_MESSAGE}}}
 
 
 
