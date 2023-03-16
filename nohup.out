@@ -1,0 +1,9 @@
+2023/03/16 17:07:25 current FDs rlimit set to 1048576, wanted limit is 8500. Nothing to do here.
+2023/03/16 17:07:28 Listening on 127.0.0.1:5440 for wildepod-339517:us-west2:wildepoddb
+2023/03/16 17:07:28 Ready for new connections
+2023/03/16 17:07:28 Generated RSA key in 307.275594ms
+2023/03/16 17:07:31 New connection for "wildepod-339517:us-west2:wildepoddb"
+2023/03/16 17:07:31 refreshing ephemeral certificate for instance wildepod-339517:us-west2:wildepoddb
+2023/03/16 17:07:33 Scheduling refresh of ephemeral certificate in 54m58s
+2023/03/16 17:07:36 New connection for "wildepod-339517:us-west2:wildepoddb"
+2023/03/16 17:07:40 New connection for "wildepod-339517:us-west2:wildepoddb"
