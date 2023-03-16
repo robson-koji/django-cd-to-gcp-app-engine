@@ -8,3 +8,7 @@ steps:
           ls -la
           gcloud version
 
+
+
+options:
+  logging: CLOUD_LOGGING_ONLY
