@@ -7,6 +7,15 @@ steps:
           echo "enter 1 bash command per line"
           ls -la
           gcloud version
+          echo 'bash - substitution variables'
+          env
+          echo '_COMMIT_MESSAGE: ' $_COMMIT_MESSAGE
+          echo '_COMMIT_MESSAGE: ' ${_COMMIT_MESSAGE}
+          echo 'DEPLOY ENV: ' ${${_COMMIT_MESSAGE}:-8:${#${_COMMIT_MESSAGE}}}
+
+
+
+
 
 
 
