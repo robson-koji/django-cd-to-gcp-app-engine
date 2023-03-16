@@ -1,4 +1,4 @@
-teps:
+steps:
   - name: 'gcr.io/cloud-builders/gcloud'
     entrypoint: "bash"
     args:
@@ -7,11 +7,8 @@ teps:
           echo "\n\n"
           echo 'bash - substitution variables'
           echo '_COMMIT_MESSAGE: ' $_COMMIT_MESSAGE
-	  echo  ${${_COMMIT_MESSAGE}:-8:${#${_COMMIT_MESSAGE}}}
+          echo  ${${_COMMIT_MESSAGE}:-8:${#${_COMMIT_MESSAGE}}}
           echo "\n\n"
-
-
-
 
 
 
