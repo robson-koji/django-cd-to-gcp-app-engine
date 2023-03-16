@@ -12,7 +12,7 @@ steps:
 
           START=$((${#_COMMIT_MESSAGE}-8))
           TESTENV=${_COMMIT_MESSAGE:${START}:${#_COMMIT_MESSAGE}}
-	  echo 'TESTENV: ' TESTENV
+          echo 'TESTENV: ' TESTENV
           echo '\n\n'
 
 
