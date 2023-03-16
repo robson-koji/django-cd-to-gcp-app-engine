@@ -1,16 +1,20 @@
 steps:
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['app', 'deploy', 'testenv2.yaml']
 
-
-# bash -c | echo $CHROME_ENV
+# bash -c | echo substitution variables
 - id: 'print env vars'
-  name: 'gcr.io/$PROJECT_ID/ng:latest'
+  name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bash'
   args:
   - '-c'
   - |
     echo 'bash - substitution variables'
     env
+    echo '_COMMIT_MESSAGE: ' $_COMMIT_MESSAGE
     echo '_COMMIT_MESSAGE: ' ${_COMMIT_MESSAGE}
     echo 'DEPLOY ENV: ' ${${_COMMIT_MESSAGE}:-8:${#${_COMMIT_MESSAGE}}}
+
+
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['app', 'deploy', 'testenv2.yaml']
+
+
