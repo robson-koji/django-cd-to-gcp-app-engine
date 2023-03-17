@@ -5,6 +5,7 @@ steps:
     args:
       - "-c"
       - |
+          echo '\n\n\n' 
           echo '_TESTENV: ' ${_TESTENV}
 
 #  - name: 'gcr.io/cloud-builders/gcloud'
@@ -22,10 +23,11 @@ steps:
 #          echo '\n\n'
 
 substitutions:
-    _TESTENV: $(echo ${_COMMIT_MESSAGE} | cut -d ':' -f2)
+    _TESTENV: ${_COMMIT_MESSAGE:$((${#_COMMIT_MESSAGE}-8)):${#_COMMIT_MESSAGE}}
 
 
 logsBucket: 'gs://buildlogsbucket'
 options:
   logging: GCS_ONLY
   dynamic_substitutions: true
+
