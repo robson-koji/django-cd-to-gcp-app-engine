@@ -22,7 +22,7 @@ steps:
 #          echo '\n\n'
 
 substitutions:
-    _TESTENV: '${_COMMIT_MESSAGE} | cut -d ":" -f2'
+    _TESTENV: $(echo ${_COMMIT_MESSAGE} | cut -d ':' -f2)
 
 
 logsBucket: 'gs://buildlogsbucket'
