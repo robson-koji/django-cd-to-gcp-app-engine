@@ -6,7 +6,7 @@ steps:
       - "-c"
       - |
           echo '\n\n\n' 
-          echo '_COMMIT: ' ${_COMMIT}
+#          echo '_COMMIT: ' ${_COMMIT}
           echo '_COMMIT_COMMIT: ' ${_COMMIT_COMMIT}
           echo '_COMMIT_MESSAGE: ' ${_COMMIT_MESSAGE}
 
